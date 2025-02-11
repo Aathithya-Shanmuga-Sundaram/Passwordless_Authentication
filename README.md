@@ -41,8 +41,8 @@ This project is a **Flask-based passwordless authentication system** that identi
 ### Steps to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/passwordless-auth.git
-   cd passwordless-auth
+   git clone https://github.com/Aathithya-Shanmuga-Sundaram/Passwordless_Authentication.git
+   cd Passwordless_Authentication
    ```
 2. Install dependencies:
    ```bash
