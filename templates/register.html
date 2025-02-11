@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        // JavaScript to get the screen resolution, timezone, and set them in hidden fields
+        window.onload = function() {
+            var screenResolution = window.screen.width + "x" + window.screen.height;
+            var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            
+            document.getElementById("screen_resolution").value = screenResolution;
+            document.getElementById("timezone").value = timezone;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form action="/register" method="POST">
+            <input type="text" name="username" placeholder="Enter Username" required>
+            <input type="email" name="email" placeholder="Enter Email" required>
+            
+            <!-- Hidden fields to store dynamic values -->
+            <input type="hidden" name="screen_resolution" id="screen_resolution">
+            <input type="hidden" name="timezone" id="timezone">
+
+            <button type="submit">Register</button>
+        </form>
+        <a href="/">Already have an account? Login here</a>
+    </div>
+</body>
+</html>
